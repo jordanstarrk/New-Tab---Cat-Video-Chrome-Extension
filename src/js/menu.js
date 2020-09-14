@@ -30,21 +30,22 @@ $('.category').hover(function(){
 //When a user clicks on dogs category item it should deselect
 $("#dogs").click(function() {
     if ($(this).css("opacity") == 0.4) {
-        $(this).css("opacity", 1);
+        enableCategory("dogs");
     }else {
-        $(this).css("opacity", 0.4);
+        disableCategory("dogs");
     }
-    updateLocalStorageWithCategorySelection();
+    // updateLocalStorageWithCategorySelection();
+    // updateLocalStorageCategories(dogs);
 });
 
 //When a user clicks on cats category item it should deselect
 $("#cats").click(function() {
     if ($(this).css("opacity") == 0.4) {
-        $(this).css("opacity", 1);
+        enableCategory("cats");
     }else {
-        $(this).css("opacity", 0.4);
+        disableCategory("dogs");
     }
-    updateLocalStorageWithCategorySelection();
+    // updateLocalStorageWithCategorySelection();
 });
 
 //Share
@@ -84,5 +85,3 @@ $("#closeIcon").click(function(){
     updateLocalStorageWithCategorySelection();
     $(".menu").hide();
 });
-
-
